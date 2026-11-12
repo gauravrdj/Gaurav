@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gaurav Sharma · Portfolio</title>
+  <meta name="description" content="Gaurav Sharma — Software Development Engineer at Amazon. Backend, distributed systems, AWS and LLM data pipelines." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand&family=Fredoka:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖍️</text></svg>" />
+</head>
+<body>
+  <!-- SVG filter that gives doodles a rough crayon edge -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="crayon">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" />
+    </filter>
+  </svg>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#top" class="logo">Gaurav<span>-kun</span> ✏️</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#report">Report Card</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-btn" aria-label="Toggle day / night">🌙</button>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="sky" aria-hidden="true">
+      <svg class="sun" viewBox="0 0 120 120" filter="url(#crayon)">
+        <g class="rays" stroke="#FF9F43" stroke-width="6" stroke-linecap="round">
+          <line x1="60" y1="4" x2="60" y2="20"/><line x1="60" y1="100" x2="60" y2="116"/>
+          <line x1="4" y1="60" x2="20" y2="60"/><line x1="100" y1="60" x2="116" y2="60"/>
+          <line x1="20" y1="20" x2="31" y2="31"/><line x1="89" y1="89" x2="100" y2="100"/>
+          <line x1="100" y1="20" x2="89" y2="31"/><line x1="20" y1="100" x2="31" y2="89"/>
+        </g>
+        <circle cx="60" cy="60" r="28" fill="#FFD23F" stroke="#FF9F43" stroke-width="5"/>
+        <circle cx="51" cy="56" r="3" fill="#2b2622"/><circle cx="69" cy="56" r="3" fill="#2b2622"/>
+        <path d="M49 66 Q60 76 71 66" stroke="#2b2622" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+      <svg class="cloud c1" viewBox="0 0 200 90" filter="url(#crayon)"><path d="M30 75 Q5 75 12 55 Q8 32 35 35 Q45 8 80 18 Q100 0 125 20 Q160 10 165 40 Q195 45 185 68 Q180 80 160 76 Z" fill="#fff" stroke="#2b2622" stroke-width="4"/></svg>
+      <svg class="cloud c2" viewBox="0 0 200 90" filter="url(#crayon)"><path d="M30 75 Q5 75 12 55 Q8 32 35 35 Q45 8 80 18 Q100 0 125 20 Q160 10 165 40 Q195 45 185 68 Q180 80 160 76 Z" fill="#fff" stroke="#2b2622" stroke-width="4"/></svg>
+      <div class="stars"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="bubble">Hiii! 👋 I'm</p>
+        <h1 class="name" aria-label="Gaurav Sharma">
+          <span class="word">Gaurav</span> <span class="word red">Sharma</span>
+        </h1>
+        <p class="role">SDE <b>@ Amazon</b></p>
+        <ul class="hero-points">
+          <li>📦 Building for sellers</li>
+          <li>⚡ Event-driven on AWS</li>
+        </ul>
+        <div class="cta">
+          <a href="#projects" class="btn btn-red">See my toys →</a>
+          <a data-link="resume" href="resume.pdf" class="btn btn-yellow" download>📄 Resume</a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <svg viewBox="0 0 320 260" filter="url(#crayon)" aria-hidden="true">
+          <!-- desk -->
+          <rect x="10" y="200" width="300" height="16" rx="4" fill="#C98B5B" stroke="#2b2622" stroke-width="4"/>
+          <line x1="30" y1="216" x2="30" y2="255" stroke="#2b2622" stroke-width="6" stroke-linecap="round"/>
+          <line x1="290" y1="216" x2="290" y2="255" stroke="#2b2622" stroke-width="6" stroke-linecap="round"/>
+          <!-- laptop -->
+          <path d="M70 70 L250 70 Q258 70 258 78 L258 186 L62 186 L62 78 Q62 70 70 70Z" fill="#2b2622"/>
+          <rect x="74" y="82" width="172" height="94" rx="4" fill="#1e2a44"/>
+          <g stroke-linecap="round" stroke-width="6">
+            <line x1="86" y1="98" x2="130" y2="98" stroke="#FF9EC4"/><line x1="138" y1="98" x2="170" y2="98" stroke="#8FD3FF"/>
+            <line x1="98" y1="114" x2="150" y2="114" stroke="#7BC950"/><line x1="158" y1="114" x2="200" y2="114" stroke="#FFD23F"/>
+            <line x1="98" y1="130" x2="128" y2="130" stroke="#B48CFF"/><line x1="136" y1="130" x2="226" y2="130" stroke="#8FD3FF"/>
+            <line x1="86" y1="146" x2="118" y2="146" stroke="#FF9EC4"/>
+            <line class="cursor-line" x1="126" y1="146" x2="138" y2="146" stroke="#fff"/>
+          </g>
+          <path d="M40 186 L280 186 L268 200 L52 200 Z" fill="#E63B2E" stroke="#2b2622" stroke-width="4" stroke-linejoin="round"/>
+          <!-- mug -->
+          <rect x="262" y="160" width="30" height="40" rx="6" fill="#FFD23F" stroke="#2b2622" stroke-width="4"/>
+          <path d="M292 168 Q306 176 292 190" stroke="#2b2622" stroke-width="4" fill="none"/>
+          <path class="steam" d="M270 150 Q264 140 272 130 Q280 120 272 110" stroke="#8a8a8a" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path class="steam s2" d="M284 150 Q278 140 286 130 Q294 120 286 110" stroke="#8a8a8a" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- crayons -->
+          <g transform="rotate(-12 40 180)">
+            <rect x="18" y="178" width="46" height="12" rx="2" fill="#7BC950" stroke="#2b2622" stroke-width="3"/>
+            <path d="M64 178 L76 184 L64 190Z" fill="#7BC950" stroke="#2b2622" stroke-width="3" stroke-linejoin="round"/>
+          </g>
+        </svg>
+        <span class="sticker s-aws" aria-hidden="true">AWS ☁️</span>
+        <span class="sticker s-java" aria-hidden="true">Java ☕</span>
+        <span class="sticker s-ts" aria-hidden="true">TypeScript</span>
+
+        <!-- character spot: img/hero.png -->
+        <button class="buddy buddy-hero" data-buddy="hero" aria-label="Say hi to my buddy">
+          <span class="buddy-art"></span>
+          <span class="buddy-bubble"></span>
+        </button>
+      </div>
+    </div>
+    <svg class="grass" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 30 Q 40 0 80 30 T 160 30 T 240 30 T 320 30 T 400 30 T 480 30 T 560 30 T 640 30 T 720 30 T 800 30 T 880 30 T 960 30 T 1040 30 T 1120 30 T 1200 30 T 1280 30 T 1360 30 T 1440 30 V60 H0Z" fill="var(--grass)" stroke="var(--border)" stroke-width="4"/>
+    </svg>
+  </section>
+
+  <main>
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section reveal">
+      <h2 class="title"><span>About me</span> 🙋‍♂️</h2>
+      <button class="buddy buddy-peek" data-buddy="about" aria-label="Say hi">
+        <span class="buddy-art"></span>
+        <span class="buddy-bubble"></span>
+      </button>
+      <div class="about-grid">
+        <div class="card paper tilt-l">
+          <span class="tape"></span>
+          <ul class="paper-list">
+            <li>Backend engineer at <b>Amazon</b></li>
+            <li>Scaling <b>seller data</b> pipelines</li>
+            <li>Turning questions into <b>queries</b> with LLMs</li>
+            <li>Competitive programmer on weekends</li>
+            <li>Loves optimising tiny things</li>
+          </ul>
+          <p class="signoff">— Gaurav ✌️</p>
+        </div>
+        <ul class="quick">
+          <li class="chip-big yellow"><b>SDE</b><span>Amazon · since Jan 2025</span></li>
+          <li class="chip-big pink"><b data-count="600" data-suffix="+">600+</b><span>LeetCode solved</span></li>
+          <li class="chip-big sky"><b>Top 75</b><span>HackOn with Amazon S4</span></li>
+          <li class="chip-big green"><b>#<span data-count="12">12</span></b><span>Global · CodeChef</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section reveal">
+      <h2 class="title"><span>My crayon box</span> 🖍️</h2>
+      <p class="sub">One crayon per toolbox.</p>
+      <!-- character spot: img/dog.png -->
+      <button class="buddy buddy-peek" data-buddy="dog" aria-label="Pet the puppy">
+        <span class="buddy-art"></span>
+        <span class="buddy-bubble"></span>
+      </button>
+      <div class="crayon-grid">
+        <div class="crayon-card">
+          <div class="crayon c-red">Languages</div>
+          <ul class="chips"><li>Java</li><li>Scala</li><li>C++</li><li>Python</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li></ul>
+        </div>
+        <div class="crayon-card">
+          <div class="crayon c-orange">Backend</div>
+          <ul class="chips"><li>Node.js</li><li>Next.js</li><li>Hono</li><li>Express.js</li><li>REST APIs</li></ul>
+        </div>
+        <div class="crayon-card">
+          <div class="crayon c-yellow">Cloud &amp; Distributed</div>
+          <ul class="chips"><li>AWS Lambda</li><li>S3</li><li>DynamoDB</li><li>SQS</li><li>SNS</li><li>Athena</li><li>Event-Driven Arch</li><li>Async Processing</li></ul>
+        </div>
+        <div class="crayon-card">
+          <div class="crayon c-green">Data &amp; Infra</div>
+          <ul class="chips"><li>PostgreSQL</li><li>MongoDB</li><li>Docker</li><li>Prisma</li><li>CI/CD</li><li>Git</li></ul>
+        </div>
+        <div class="crayon-card">
+          <div class="crayon c-purple">AI / Data Eng</div>
+          <ul class="chips"><li>Amazon Bedrock</li><li>LLM Apps</li><li>RAG</li><li>Natural Language → SQL</li></ul>
+        </div>
+        <div class="crayon-card">
+          <div class="crayon c-sky">CS Fundamentals</div>
+          <ul class="chips"><li>DSA</li><li>OOP</li><li>Distributed Systems</li><li>DB Transactions</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section id="work" class="section reveal">
+      <h2 class="title"><span>Grown-up job</span> 💼</h2>
+      <article class="card job">
+        <span class="tape"></span>
+        <div class="job-head">
+          <div>
+            <h3>Software Development Engineer</h3>
+            <p class="company">Amazon</p>
+          </div>
+          <span class="date-badge">Jan 2025 → Present</span>
+        </div>
+        <ul class="doodle-list">
+          <li>Backend services for <b>high-volume seller data</b></li>
+          <li><b>Event-driven</b> pipelines: Lambda · SQS · SNS · S3 · DynamoDB</li>
+          <li><b>Natural language → SQL</b> with Bedrock + Athena</li>
+          <li>Faster, more reliable <b>LLM pipelines</b></li>
+        </ul>
+        <ul class="chips small"><li>Java</li><li>TypeScript</li><li>AWS</li><li>Bedrock</li><li>Lambda</li><li>DynamoDB</li><li>S3</li></ul>
+      </article>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section reveal">
+      <h2 class="title"><span>Things I built in the sandbox</span> 🏖️</h2>
+      <button class="buddy buddy-peek" data-buddy="projects" aria-label="Ask the baby">
+        <span class="buddy-art"></span>
+        <span class="buddy-bubble"></span>
+      </button>
+      <div class="project-grid">
+        <article class="polaroid tilt-l">
+          <div class="shot bg-green"><span>💸</span><em>Payments App</em></div>
+          <div class="pol-body">
+            <h3>Payments App <small>Apr 2024</small></h3>
+            <ul class="mini-list">
+              <li>P2P transfers + wallet top-ups</li>
+              <li>Custom bank webhook server</li>
+              <li>ACID transactions</li>
+              <li>Docker monorepo + CI/CD</li>
+            </ul>
+            <ul class="chips small"><li>TypeScript</li><li>Next.js</li><li>Node.js</li><li>PostgreSQL</li><li>Prisma</li><li>Docker</li></ul>
+            <div class="pol-links">
+              <a data-link="paymentsGithub" href="#" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+              <a data-link="paymentsLive" href="#" target="_blank" rel="noopener" class="btn btn-sm btn-yellow">Live ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="polaroid tilt-r">
+          <div class="shot bg-pink"><span>✍️</span><em>Medium Clone</em></div>
+          <div class="pol-body">
+            <h3>Medium: Publishing Platform <small>Jan 2024</small></h3>
+            <ul class="mini-list">
+              <li>Serverless on Cloudflare</li>
+              <li>500 concurrent users</li>
+              <li>Pooled Postgres for the edge</li>
+            </ul>
+            <ul class="chips small"><li>TypeScript</li><li>React</li><li>Hono</li><li>Cloudflare</li><li>PostgreSQL</li><li>Prisma</li></ul>
+            <div class="pol-links">
+              <a data-link="mediumGithub" href="#" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+              <a data-link="mediumLive" href="#" target="_blank" rel="noopener" class="btn btn-sm btn-yellow">Live ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="polaroid tilt-l">
+          <div class="shot bg-sky"><span>🗂️</span><em>Profile Manager</em></div>
+          <div class="pol-body">
+            <h3>Dynamic Profile Manager <small>Dec 2023</small></h3>
+            <ul class="mini-list">
+              <li>200+ profiles, one place</li>
+              <li>LinkedIn · GitHub · LeetCode</li>
+              <li>REST APIs + MongoDB</li>
+            </ul>
+            <ul class="chips small"><li>React</li><li>JavaScript</li><li>Node.js</li><li>Express</li><li>MongoDB</li></ul>
+            <div class="pol-links">
+              <a data-link="profileGithub" href="#" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+              <a data-link="profileLive" href="#" target="_blank" rel="noopener" class="btn btn-sm btn-yellow">Live ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ REPORT CARD ============ -->
+    <section id="report" class="section reveal">
+      <h2 class="title"><span>Gold-star report card</span> ⭐</h2>
+      <p class="sub">Tap a sticker!</p>
+      <button class="buddy buddy-peek" data-buddy="report" aria-label="Laugh along">
+        <span class="buddy-art"></span>
+        <span class="buddy-bubble"></span>
+      </button>
+      <div class="report card">
+        <div class="report-head">
+          <div><b>Student:</b> Gaurav Sharma</div>
+          <div><b>Class:</b> Competitive Programming</div>
+          <div class="stamp">EXCELLENT!</div>
+        </div>
+        <div class="report-row header"><span>Subject</span><span>Score</span><span>Teacher's remark</span><span></span></div>
+        <div class="report-row">
+          <span class="subj">HackOn with Amazon S4</span>
+          <span class="score">The Titan · Top 75</span>
+          <span class="remark">"Top of the class!"</span>
+          <button class="gold" aria-label="Gold star">⭐</button>
+        </div>
+        <div class="report-row">
+          <span class="subj">LeetCode <a data-link="leetcode" href="#" target="_blank" rel="noopener" class="profile-link" aria-label="LeetCode profile">↗</a></span>
+          <span class="score"><span data-count="1719">1719</span> · Top 11.57%</span>
+          <span class="remark">"600+ problems. Wow."</span>
+          <button class="gold" aria-label="Gold star">🌟</button>
+        </div>
+        <div class="report-row">
+          <span class="subj">CodeChef <a data-link="codechef" href="#" target="_blank" rel="noopener" class="profile-link" aria-label="CodeChef profile">↗</a></span>
+          <span class="score">3★ · <span data-count="1621">1621</span></span>
+          <span class="remark">"Global #12, Starters 160"</span>
+          <button class="gold" aria-label="Gold star">🏅</button>
+        </div>
+        <div class="report-row">
+          <span class="subj">GeeksforGeeks <a data-link="gfg" href="#" target="_blank" rel="noopener" class="profile-link" aria-label="GeeksforGeeks profile">↗</a></span>
+          <span class="score">4★ · <span data-count="1815">1815</span></span>
+          <span class="remark">"250+ solved. Keeps going!"</span>
+          <button class="gold" aria-label="Gold star">✨</button>
+        </div>
+        <div class="report-row">
+          <span class="subj">Google Kick Start (H)</span>
+          <span class="score">Rank <span data-count="4617">4617</span></span>
+          <span class="remark">"Early starter!"</span>
+          <button class="gold" aria-label="Gold star">🎖️</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section id="school" class="section reveal">
+      <h2 class="title"><span>School days</span> 🎒</h2>
+      <div class="edu-grid">
+        <article class="card edu tilt-r">
+          <span class="tape"></span>
+          <div class="edu-icon">🎓</div>
+          <h3>NIT Rourkela</h3>
+          <p>B.Tech, Electrical Engg · 7.33</p>
+          <p class="muted">2021 – 2025</p>
+        </article>
+        <article class="card edu tilt-l">
+          <span class="tape"></span>
+          <div class="edu-icon">🏫</div>
+          <h3>Jawahar Navodaya Vidyalaya</h3>
+          <p>Intermediate · 93.80%</p>
+          <p class="muted">2019 – 2020 · Dausa</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section reveal">
+      <div class="contact card">
+        <!-- character spot: img/wave.png -->
+        <button class="buddy buddy-contact" data-buddy="wave" aria-label="Wave back">
+          <span class="buddy-art"></span>
+          <span class="buddy-bubble"></span>
+        </button>
+        <h2 class="title center"><span>Wanna play?</span> 🤝</h2>
+        <ul class="contact-points">
+          <li>Backend systems</li>
+          <li>LLM pipelines</li>
+          <li>New roles</li>
+        </ul>
+        <div class="cta center">
+          <a data-link="email" href="mailto:ssparasher16@gmail.com" class="btn btn-red">✉️ Say hi</a>
+          <a data-link="linkedin" href="#" target="_blank" rel="noopener" class="btn btn-sky">LinkedIn</a>
+          <a data-link="github" href="#" target="_blank" rel="noopener" class="btn btn-yellow">GitHub</a>
+        </div>
+        <div class="cta center coding-links">
+          <a data-link="leetcode" href="#" target="_blank" rel="noopener" class="btn btn-sm">🧩 LeetCode</a>
+          <a data-link="codechef" href="#" target="_blank" rel="noopener" class="btn btn-sm">👨‍🍳 CodeChef</a>
+          <a data-link="codeforces" href="#" target="_blank" rel="noopener" class="btn btn-sm">📊 Codeforces</a>
+          <a data-link="gfg" href="#" target="_blank" rel="noopener" class="btn btn-sm">🟢 GeeksforGeeks</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <button class="buddy buddy-footer" data-buddy="footer" aria-label="Thanks!">
+      <span class="buddy-art"></span>
+      <span class="buddy-bubble"></span>
+    </button>
+    Drawn with crayons &amp; code by Gaurav Sharma · <span id="year">2026</span>
+    <small>psst… try typing “cookie” 🍪</small>
+    <small class="credits">Crayon Shin-chan characters © Yoshito Usui / Futabasha · fan art by artofauzar · used for fun, not affiliated</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
